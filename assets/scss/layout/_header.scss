@@ -1,0 +1,56 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+header {
+    @include mixin.flex(column,space-between, center);
+    background-image: url(../img/banner_bg.jpg);
+    @include mixin.bgImage;
+    background-color: red;
+    height: 55rem;
+}
+
+nav {
+    @include mixin.flex ($justify:space-between);
+    width: 85%;
+
+    span {
+        color: var.$primaryColor;
+        font-size: 3rem;
+    }
+    ul {
+        @include mixin.flex;
+        gap: 4rem;
+    }
+}
+
+.burger_focus {
+
+    .burger_icon {
+        display: none;
+    }
+}
+
+.hero {
+    @include mixin.flex (column, center, center);
+    height: 100%;
+    width: 35%;
+    text-align: center;
+    gap: 1.5rem;
+
+    span:first-child {
+        color: var.$secondaryColor;
+    }
+
+    span:last-child {
+        color: var.$primaryColor;
+    }
+
+    p {
+        width: 95%;
+    }
+
+    .btn {
+        background-color: white;
+        color: black;
+    }
+}

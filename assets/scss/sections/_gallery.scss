@@ -1,0 +1,66 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+.gallery {
+    height: 60rem;
+}
+
+.gallery_container {
+    @include mixin.flex;
+    width: 100%;
+}
+
+.gallery_menu {
+    @include mixin.flex (column, center, center);
+    background-color: var.$secondaryColor;
+    height: 100%;
+
+    .menu_container {
+        @include mixin.flex (column, center, start);
+        width: 45%;
+        padding-left: 6rem;
+        gap: 2rem;
+
+        .gallery_menu_title {
+            border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+    }
+
+    ul {
+        @include mixin.flex(column, center, start);
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+}
+
+.gallery_image {
+    @include mixin.flex;
+}
+
+.gallery_grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 95%;
+    width: 95%;
+    width: 100%;
+    margin: 1.5rem;
+
+    div {
+        position: relative;
+        aspect-ratio: 385/250;
+    }
+  
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+
+    }
+}
+

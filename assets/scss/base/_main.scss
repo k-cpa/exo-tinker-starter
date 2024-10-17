@@ -1,0 +1,61 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Bold.ttf);
+    font-weight: 800;
+}
+
+body {
+    color: var.$colorText;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+
+}
+
+// ELEMENTS DE STYLE GENERAUX 
+
+a {
+    color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.btn {
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.responsive {
+    max-width: 1720px;
+    height: 100%
+}
+
+// MISE EN FORME SECTIONS GALLERY ET BLOG 
+
+.section_menu {
+    @include mixin.flex (column, center, center);
+    width: 40%;
+    height: 100%;
+}
+
+.section_right {
+    width: 60%;
+    height: 100%;
+}
