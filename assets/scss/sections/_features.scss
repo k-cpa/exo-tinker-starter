@@ -4,19 +4,10 @@
 
 // fixer le BG-image qui n'est pas bon
 .features {
-    background-image: url(../img/banner_bg.jpg);
+    background-image: url(../img/about-bg.jpg);
     @include mixin.flex(column, start, center);
     @include mixin.bgImage;
     height: 50rem;
-}
-
-.features_bgImageMid {
-    @include mixin.flex;
-    background-image: url(../img/about-bg.jpg);
-    @include mixin.bgImage;
-    width: 100%;
-    height: 75%;
-    margin-top: 3%;
 }
 
 .features_cards_container {
