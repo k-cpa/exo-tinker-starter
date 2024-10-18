@@ -109,6 +109,7 @@ h3 {
   align-items: center;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 50rem;
 }
 .features h3 {
@@ -649,6 +650,7 @@ header {
   background-image: url(../img/banner_bg.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 55rem;
 }
 header a:hover {

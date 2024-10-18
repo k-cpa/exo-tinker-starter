@@ -7,6 +7,7 @@
     background-image: url(../img/about-bg.jpg);
     @include mixin.flex(column, start, center);
     @include mixin.bgImage;
+    background-attachment: fixed;
     height: 50rem;
 
     h3 {

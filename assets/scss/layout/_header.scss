@@ -5,6 +5,7 @@ header {
     @include mixin.flex(column,space-between, center);
     background-image: url(../img/banner_bg.jpg);
     @include mixin.bgImage;
+    background-attachment: fixed;
     height: 55rem;
 
     a:hover {
