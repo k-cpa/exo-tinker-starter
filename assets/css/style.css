@@ -655,7 +655,6 @@ header {
 }
 header a:hover {
   color: #F6C45C;
-  transform: scale(1.1);
 }
 header a:hover:hover span {
   color: #3CC2CD;
@@ -669,6 +668,9 @@ nav {
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+}
+nav a:hover {
+  transform: scale(1.1);
 }
 nav span {
   color: #F6C45C;
