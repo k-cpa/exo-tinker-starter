@@ -10,6 +10,7 @@ header {
 
     a:hover {
         color: var.$primaryColor;
+        transform: scale(1.1);
 
         &:hover span {
             color: var.$secondaryColor;

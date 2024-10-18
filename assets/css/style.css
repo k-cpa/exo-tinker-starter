@@ -655,6 +655,7 @@ header {
 }
 header a:hover {
   color: #F6C45C;
+  transform: scale(1.1);
 }
 header a:hover:hover span {
   color: #3CC2CD;
