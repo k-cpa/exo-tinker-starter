@@ -1,7 +1,3 @@
-@use "abstract/mixin";
-@use "abstract/responsive";
-@use "abstract/variable";
-@use "abstract/keyframes";
 @use "base/main";
 @use "base/reset";
 @use "sections/features";
@@ -12,5 +8,9 @@
 @use "sections/map";
 @use "layout/footer";
 @use "layout/header";
+@use "abstract/mixin";
+@use "abstract/responsive";
+@use "abstract/variable";
+@use "abstract/keyframes";
 
 

@@ -68,11 +68,13 @@
 
                             span {
                                 line-height: 45px;
+                                transition: .3s ease;
                             }
                         }
                     }
                     li:hover span {
                         color: var.$primaryColor;
+                        text-decoration: underline;
                     }
                 }
         }
@@ -91,19 +93,11 @@
     background-color: white;
     color: black;
 
-    .img_abs {
-        position: relative;
-        overflow: hidden;
+    .blog_img_bg {
+        height: 70%;
         width: 100%;
-        height: 65%;
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            object-fit: cover
-        }
+        background-image: url(../img/blog_item_01.jpg);
+        @include mixin.bgImage;
     }
 
     .blog_right_elements {

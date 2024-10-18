@@ -29,7 +29,9 @@ body {
 // ELEMENTS DE STYLE GENERAUX 
 
 a {
+    display: inline-block;
     color: white;
+    transition: .3s ease;
 }
 
 h2 {
@@ -92,7 +94,7 @@ h3 {
 }
 
 .responsive {
-    max-width: 1720px;
+    width: 1720px;
     height: 100%
 }
 

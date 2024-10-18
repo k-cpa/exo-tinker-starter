@@ -5,18 +5,27 @@ header {
     @include mixin.flex(column,space-between, center);
     background-image: url(../img/banner_bg.jpg);
     @include mixin.bgImage;
-    background-color: red;
     height: 55rem;
-    z-index: -2;
+
+    a:hover {
+        color: var.$primaryColor;
+
+        &:hover span {
+            color: var.$secondaryColor;
+        }
+    }
 }
 
 nav {
     @include mixin.flex ($justify:space-between);
-    width: 85%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 
     span {
         color: var.$primaryColor;
         font-size: 3rem;
+        transition: .3s ease;
     }
     ul {
         @include mixin.flex;

@@ -16,8 +16,8 @@
 
 .features_cards_container {
     @include mixin.flex;
-    width: 80%;
-    gap: 2rem;
+    width: 100%;
+
 
     .features_card {
         @include mixin.flex(column, center, center);
