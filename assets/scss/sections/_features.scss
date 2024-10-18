@@ -8,6 +8,10 @@
     @include mixin.flex(column, start, center);
     @include mixin.bgImage;
     height: 50rem;
+
+    h3 {
+        font-size: 1.2rem
+    }
 }
 
 .features_cards_container {
@@ -32,23 +36,26 @@
                 width: 100px;
                 height: 100px;
                 background-color: var.$primaryColor;
-                border-radius: 50px;
+                border-radius: 50%;
                 position: relative;
 
 
-                &::before {
+                &::after {
                     content: "";
                     position: absolute;
-                    width: 105px;
-                    height: 105px;
+                    width: 100px;
+                    height: 100px;
+                    padding: 5px;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     border-radius: inherit;
-                    background-color: white;
+                    // variable dans keyframes.scss -> 
+                    background-image: conic-gradient(from var(--angle),white, var.$secondaryColor, var.$secondaryColor, white);
                     z-index: -1;
+                    animation: 2.5s spin linear infinite;
                 }
-            }
+            }        
         }
 
         .card_bottom {
@@ -59,6 +66,11 @@
 
         .btn {
             background-color: var.$secondaryColor;
+            font-size: .9rem;
+            
+            span {
+                color: white;
+            }
         }
 
         p {

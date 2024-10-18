@@ -36,10 +36,59 @@ h2 {
     font-size: 2.5rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
+// GESTION BOUTONS
+
+// général
+
 .btn {
-    padding: 13px 20px;
+    background: white;
+    width: 160px;
+    height: 50px;
     border-radius: 30px;
-    font-weight: 600;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s ease;
+
+
+    span:first-child, span:last-child {
+        color: black;
+        position: absolute;
+        width: 160px;
+        height: 50px;
+        line-height: 50px;
+        transition: top .3s ease;
+    }
+
+    span:first-child {
+        top: 0;
+        left: 0;  
+        transition: .3s ease;
+    }
+
+    span:last-child {
+        top: 100px;
+        left: 0;
+        transition: .3s ease;
+    }
+
+    &:hover {
+        background-color: var.$primaryColor;
+        transform: scale(1.1);
+
+        span:first-child {
+            top: -40px;
+            color: var.$primaryColor;
+        }
+        span:last-child {
+            top: 0;
+        }
+    }
 }
 
 .responsive {
@@ -51,11 +100,11 @@ h2 {
 
 .section_menu {
     @include mixin.flex (column, center, center);
-    width: 40%;
+    width: 35%;
     height: 100%;
 }
 
 .section_right {
-    width: 60%;
+    width: 65%;
     height: 100%;
 }

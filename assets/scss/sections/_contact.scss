@@ -1,0 +1,36 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+.contact {
+    @include mixin.flex;
+    background-color: #595F65;
+    height: 30rem;
+
+    .responsive {
+        @include mixin.flex;
+    }
+}
+
+.contact_container {
+    @include mixin.flex (column, center, center);
+    width: 50%;
+    text-align: center;
+
+    .contact_title {
+        width: 60%;
+        border-bottom: 1px solid white;
+        padding-bottom: 2rem;
+    } 
+
+    .contact_elements {
+        @include mixin.flex (column, center, center);
+        width: 100%;
+        gap: 2rem;
+        padding-top: 2rem;
+        line-height: 1.5rem;
+
+        .btn {
+            font-size: .9rem;
+        }
+    }
+} 

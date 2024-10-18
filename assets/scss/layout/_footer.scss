@@ -1,0 +1,111 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+footer {
+    @include mixin.flex;
+    background-color: #373B3C;
+    height: 15rem;
+}
+
+.footer_container {
+    @include mixin.flex($justify: space-around);
+    width: 100%;
+
+    .logo_wrapper {
+
+        span {
+            color: var.$primaryColor;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding-bottom: .75rem;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+    .location {
+        @include mixin.flex (column, center, center);
+        width: 20%;
+
+        .location_title {
+            width: 90%;
+            padding-bottom: 2.5rem;
+            
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .location_elements {
+            @include mixin.flex;
+            width: 90%;
+
+            .raffles {
+                @include mixin.flex;
+                border-right: 1px solid rgb(255, 255, 255, 0.2);
+                height: 60px;
+            }
+
+            .republic {
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    .info {
+        @include mixin.flex (column, center, start);
+
+        .info_title {
+            padding-bottom: 2.5rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .info_elements {
+            @include mixin.flex (column, center, start);
+            gap: .5rem;
+            span {
+                font-weight: bold;
+            }
+        } 
+    }
+
+    .socials {
+        @include mixin.flex (column, center, start);
+
+        .socials_title {
+            padding-bottom: 2.5rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        ul {
+            @include mixin.flex;
+            gap: .3rem;
+
+            li {
+                background-color: white;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                position: relative;
+                
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #373B3C;
+                }
+            }
+        }
+
+    }
+}

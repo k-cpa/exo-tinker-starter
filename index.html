@@ -31,10 +31,18 @@
         <div class="hero">
             <h2>Awesome <span>HTML5 </span>Template <span>TINKER</span></h2>
             <p>Phasellus aliquam finibus est, id tincidunt mauris fermentum a. In elementum diam et dui congue, ultrices bibendum mi lacinia. Aliquam lobortis dapibus nunc, nec tempus odio posuere quis.</p>
-            <a class="btn btn_hero" href="">LET'S START</a>
+            <div class="btn">
+                <a href="">
+                    <span class="btn-1">LET'S START</span>
+                    <span class="btn-2">LET'S START </span>
+                    
+                </a>
+            </div>
         </div>
     </header>
     <main>
+
+        <!--section features-->
         <section class="features">
             <article class="responsive features_cards_container"> <!--container en flex row et cards en col -->
                 <div class="features_card">
@@ -46,8 +54,11 @@
                     </div>
                     <div class="card_bottom"> <!-- padding top = padding de la div du dessus -->
                         <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="btn_wrapper">
-                            <a class="btn">CONTINUE READING</a>
+                        <div class="btn btn_wrapper">
+                            <a">
+                                <span>CONTINUE READING</span>
+                                <span>CONTINUE READING</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -60,8 +71,11 @@
                     </div>
                     <div class="card_bottom">
                         <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="btn_wrapper">
-                            <a class="btn">CONTINUE READING</a>
+                        <div class="btn btn_wrapper">
+                            <a href="">
+                                <span>CONTINUE READING</span>
+                                <span>CONTINUE READING</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -74,8 +88,11 @@
                     </div>
                     <div class="card_bottom">
                         <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="btn_wrapper">
-                            <a class="btn">CONTINUE READING</a>
+                        <div class="btn btn_wrapper">
+                            <a href="">
+                                <span>CONTINUE READING</span>
+                                <span>CONTINUE READING</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -88,8 +105,11 @@
                     </div>
                     <div class="card_bottom">
                         <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="btn_wrapper">
-                            <a class="btn">CONTINUE READING</a>
+                        <div class="btn btn_wrapper">
+                            <a href="">
+                                <span>CONTINUE READING</span>
+                                <span>CONTINUE READING</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -114,9 +134,10 @@
                         </div>
                     </div>
                 </article>
-                <article class="section_right gallery_image"> <!-- section_right : prend w70% h-full -->
+
+                <article class="section_right gallery_image"> <!-- section_right  -->
                     <div class="gallery_grid_container"> <!--container de la grid / margin à faire -->
-                        <div class="img_abs">
+                        <div class="img_abs"> <!-- overflow hidden -->
                             <img src="assets/img/portfolio_item_01.jpg" alt="Image d'une table décorée avec divers éléments">
                         </div>
                         <div class="img_abs">
@@ -143,32 +164,41 @@
                 <div class="testimony_bgWhite">
                     <p>"Quisque ut ligula venenatis, euismod risus vel, consequat lacus. In ut purus id felis euismod cursus. Praesent in pulvinar arcu, vitae hendrerit lectus. Quisque a urna magna.</p>
                 </div>
-                <p><span>Richard beal</span>CSS Developer</p>
-                <!-- favicons points -->
+                <div class="testimony_name">
+                    <p><span>Richard beal</span>CSS Developer</p>
+                </div>
             </article>
         </section>
+
+        <!-- section blog - relativement pareil que gallery voir pour optimiser  -->
         <section class="blog"> 
-            <div class="responsive">
+            <div class="responsive blog_container">
                 <article class="section_menu blog_menu">
-                    <h3>OUR BLOG POSTS</h3>
-                    <div class="section_text_nav gallery_text_nav">
-                        <p>Chia hot chicken la croix ugh dreamcatcher man bun squid vaporwave kinfolk.</p>
-                        <ul>
-                            <li><a href="">Lorem Ipsum Dolor Sit</a></li>
-                            <li><a href="">Quisque Ultricied Maximus</a></li>
-                            <li><a href="">Sed Vel Elit Et Lorem</a></li>
-                            <li><a href="">Vivamus Purus Neque</a></li>
-                        </ul>
+                    <div class="menu_container">
+                        <div class="blog_menu_title">
+                            <h3>OUR BLOG POSTS</h3>
+                        </div>
+                        <div class="section_text_nav blog_text_nav">
+                            <p>Chia hot chicken la croix ugh dreamcatcher man bun squid vaporwave kinfolk.</p>
+                            <ul>
+                                <li><a href=""><span>Lorem Ipsum Dolor Sit</span></a></li>
+                                <li><a href=""><span>Quisque Ultricied Maximus</span></a></li>
+                                <li><a href=""><span>Sed Vel Elit Et Lorem</span></a></li>
+                                <li><a href=""><span>Vivamus Purus Neque</span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 <article class="section_right blog_card">
                     <div class="section_right_container blog_right_container">
                         <div class="img_abs">
-                            <img src="" alt="">
+                            <img src="assets/img/blog_item_01.jpg" alt="Image d'un couple dans la rue">
                         </div>
                         <div class="blog_right_elements">
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <h4>Digital Marketing / John / 22 September 2017</h4>
+                            <div class="elements_title">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                                <h4>Digital Marketing / John / 22 September 2017</h4>
+                            </div>
                             <p>Sed sed elementum diam. Nunc vehicula leo et ante dapibus tincidunt. Praesent fringilla mauris gravida enim laoreet, eu cursus erat dignissim. Praesent lacinia, nisi in suscipit commodo, isus elit viverra neque, ut pretium eros turpis vel enim. Maecenas vitae lacus purus.</p>                            
                         </div>
                     </div>
@@ -176,38 +206,45 @@
             </div>
         </section>
         <section class="contact">
-            <div class="responsive contact_container">
-                <div class="contact_title">
-                    <h3>CONTACT US</h3>
-                </div>
-                <div class="contact_elements">
-                    <p>Dones sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
-                    <div class="btn_wrapper">
-                        <a class="btn" href="">SEND US A MESSAGE</a>
+            <div class="responsive">
+                <div class="contact_container">
+                    <div class="contact_title">
+                        <h3>CONTACT US</h3>
+                    </div>
+                    <div class="contact_elements">
+                        <p>Dones sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
+                        <div class="btn btn_wrapper">
+                            <a href="">
+                                <span>SEND US A MESSAGE</span>
+                                <span>SEND US A MESSAGE</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="map">
-            <!-- mettre la map google -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8081232880745!2d103.86043767691487!3d1.2893572986983903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19205a053e4f%3A0xa436a9d6e4de27c0!2s30%20Raffles%20Ave.%2C%20Singapour%20039803!5e0!3m2!1sfr!2sfr!4v1729245520733!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
 </body>
 <footer>
-    <div class="responsive">
+    <div class="responsive footer_container">
         <div class="logo_wrapper">
-            <img src="" alt="">
+                <h2><span>T</span>INKER</h2>
             <p>Copyright © 2017 Your Company Design: <span>templatemo</span></p>
         </div>
         <div class="location">
             <div class="location_title">
                 <h3>LOCATION</h3>
             </div>
-            <div class="raffles">
-                <p>30 Raffles Ave, Singapore 039803</p>
-            </div>
-            <div class="republic">
-                <p>1 Republic Blvd, Singapore 038975</p>
+            <div class="location_elements">
+                <div class="raffles">
+                    <p>30 Raffles Ave, Singapore 039803</p>
+                </div>
+                <div class="republic">
+                    <p>1 Republic Blvd, Singapore 038975</p>
+                </div>
             </div>
         </div>
         <div class="info">
@@ -226,11 +263,11 @@
             <div class="links">
                 <!-- ajouter favicons -->
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-wifi"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-basketball"></i></a></li>
                 </ul>
             </div>
         </div>

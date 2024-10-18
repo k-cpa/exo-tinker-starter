@@ -1,0 +1,21 @@
+@use "../abstract/variable" as var;
+
+
+// Permet de bypass le fait que l'on ne puisse pas 
+// animer des variables ! 
+// "@property" est expérimental donc peut être pas top ..
+// 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg
+    }
+    to {
+        --angle: 360deg
+    }
+}

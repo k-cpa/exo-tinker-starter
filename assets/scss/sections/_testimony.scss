@@ -1,0 +1,46 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+
+.testimony {
+    @include mixin.flex;
+    background-color: var.$primaryColor;
+    height: 40rem;
+}
+
+.testimony_container {
+    @include mixin.flex (column, center, center);
+    gap: 2rem;
+    text-align: center;
+
+    .testimony_bgWhite {
+        @include mixin.flex;
+        background-color: white;
+        color: black;
+        width: 55%;
+        height: 25%;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        font-style: italic;
+
+        p {
+            opacity: .6;
+            width: 90%;
+            
+        }
+    }
+
+    .testimony_name {
+        @include mixin.flex (column, center, center);
+        font-size: .9rem;
+        
+        span {
+            display: block;
+            padding-bottom: .75rem;
+        }
+
+        span:first-child {
+            font-size: 1.3rem;
+        }
+    }
+}

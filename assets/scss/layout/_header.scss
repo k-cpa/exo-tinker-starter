@@ -7,6 +7,7 @@ header {
     @include mixin.bgImage;
     background-color: red;
     height: 55rem;
+    z-index: -2;
 }
 
 nav {
@@ -50,7 +51,44 @@ nav {
     }
 
     .btn {
-        background-color: white;
-        color: black;
+        
+        span:first-child, span:last-child {
+            color: black;
+            position: absolute;
+            width: 160px;
+            height: 50px;
+            line-height: 50px;
+            transition: top .3s ease;
+        }
+
+        span:first-child {
+            top: 0;
+            left: 0;  
+            transition: .3s ease;
+        }
+
+        span:last-child {
+            top: 100px;
+            left: 0;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            background-color: var.$primaryColor;
+            transform: scale(1.1);
+
+            span:first-child {
+                top: -40px;
+                color: var.$primaryColor;
+            }
+            span:last-child {
+                top: 0;
+            }
+        }
+
+        // 
     }
+
+
+
 }

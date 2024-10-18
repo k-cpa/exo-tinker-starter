@@ -1,0 +1,129 @@
+@use "../abstract/mixin";
+@use "../abstract/variable" as var;
+
+
+.blog {
+    background-image: url(../img/blog-bg.jpg);
+    @include mixin.bgImage (cover, center);
+    height: 45rem;
+}
+
+.blog_container {
+    @include mixin.flex;
+    width: 100%;
+}
+
+
+.blog_menu {
+    position: relative;
+    @include mixin.flex (column, center, center);
+    height: 100%;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        opacity: .6;
+        z-index: 0;
+    }
+
+    .menu_container {
+        @include mixin.flex (column, center, start);
+        width: 65%;
+        padding-left: 6rem;
+        gap: 2rem;
+        z-index: 1;
+
+        .blog_menu_title {
+            border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+
+        .blog_text_nav {
+            @include mixin.flex (column, center, start);
+                width: 100%;
+                gap: 2rem;
+                font-size: .95rem;
+
+                ul {
+                    width: 100%;
+                    padding-top: 3rem;
+
+                    li {
+                        padding-bottom: 1.5rem;
+
+                        a {
+                            display: inline-block;
+                            width: 100%;
+                            height: 45px;
+                            background-color: white;
+                            color: black;
+                            font-weight: 600;
+                            text-align: center;
+
+                            span {
+                                line-height: 45px;
+                            }
+                        }
+                    }
+                    li:hover span {
+                        color: var.$primaryColor;
+                    }
+                }
+        }
+    }
+}
+
+.blog_card {
+    @include mixin.flex;
+    padding: 1.2rem 1.2rem 4rem 1.2rem;
+}
+
+.blog_right_container {
+    @include mixin.flex (column, center, center);
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    color: black;
+
+    .img_abs {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 65%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover
+        }
+    }
+
+    .blog_right_elements {
+        @include mixin.flex (column, start, start);
+        padding: 1.5rem;
+        width: 100%;
+        height: 35%;
+        line-height: 1.7rem;
+
+        h4 {
+            color: var.$secondaryColor;
+            font-weight: normal;
+        }
+
+        p {
+            width: 95%;
+            padding-top: 1rem;
+            opacity: .7;
+        }
+    }
+}
+
+

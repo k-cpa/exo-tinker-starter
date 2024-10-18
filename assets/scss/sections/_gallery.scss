@@ -17,7 +17,7 @@
 
     .menu_container {
         @include mixin.flex (column, center, start);
-        width: 45%;
+        width: 65%;
         padding-left: 6rem;
         gap: 2rem;
 
@@ -32,35 +32,67 @@
         @include mixin.flex(column, center, start);
         gap: 1rem;
         margin-top: 4rem;
+        
+        a {
+            display: inline-block; 
+            transition: .3s ease;
+            
+            &:hover {
+                transform: scale(1.2);
+                color: var.$primaryColor;
+            }
+        }
     }
 }
 
 .gallery_image {
     @include mixin.flex;
+    padding: 2.2rem 2.2rem;
 }
 
 .gallery_grid_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 95%;
-    width: 95%;
+    height: 100%;
     width: 100%;
-    margin: 1.5rem;
-
-    div {
-        position: relative;
-        aspect-ratio: 385/250;
+    
+    .img_abs:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
     }
-  
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        object-fit: cover;
+    .img_abs:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .img_abs:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .img_abs:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .img_abs:nth-child(5) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .img_abs:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+    }
 
+    .img_abs {
+        position: relative;
+        overflow: hidden;
+
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        } 
     }
 }
 

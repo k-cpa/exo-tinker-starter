@@ -1,10 +1,15 @@
 @use "abstract/mixin";
 @use "abstract/responsive";
 @use "abstract/variable";
+@use "abstract/keyframes";
 @use "base/main";
 @use "base/reset";
 @use "sections/features";
 @use "sections/gallery";
+@use "sections/testimony";
+@use "sections/blog";
+@use "sections/contact";
+@use "sections/map";
 @use "layout/footer";
 @use "layout/header";
 
